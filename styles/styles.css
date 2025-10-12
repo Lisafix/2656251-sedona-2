@@ -681,31 +681,56 @@ h1 {
 }
 
 .control {
-  position: relative;
-  display: block;
-  padding-left: 36px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
 }
 
 .control-mark {
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 20px;
+  margin-right: 16px;
+  flex-shrink: 0;
   background-color: white;
   border-radius: 4px;
   left: 0;
 }
 
-.control:hover .control-mark {
-  /* hz kak sdelat prozrachny */
+.radio-input {
+  border-radius: 50%;
 }
 
-.control-input:disabled + .control-mark {
-  /* same */
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url("../images/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 10px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  background-image: url(../images/tick.svg);
+.control-input[type="radio"]:checked + .control-mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:focus + .control-mark {
+  box-shadow: solid 3px #83B3D3;
+  opacity: 1;
 }
 
 .catalog-filter-item {
@@ -1245,6 +1270,7 @@ h1 {
   width: 247px;
   align-items: center;
   gap: 8px;
+  justify-content: space-between;
 }
 
 .auth-form-field {
@@ -1253,7 +1279,6 @@ h1 {
   padding: 12px 20px;
   background-color: #F2F2F2;
   border: none;
-  border-radius: 4px;
   box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
@@ -1269,14 +1294,34 @@ h1 {
 }
 
 .auth-form-field-people {
-  width: 31px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  padding: 14px 10px;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: transparent;
 }
 
-.input-counter-wrapper {
+.counter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 48px;
+  flex-shrink: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input-counter {
   display: flex;
   align-items: center;
-  position: relative;
-  width: 110px
+  width: 110px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
 }
 
 .auth-form-field-people::-webkit-outer-spin-button,
@@ -1310,7 +1355,7 @@ h1 {
 
 
 .modal-container-close {
-  display:  none;
+  display: none;
 }
 
 .tooltip {
