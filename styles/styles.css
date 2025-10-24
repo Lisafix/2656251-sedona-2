@@ -87,7 +87,6 @@ body {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(130, 179, 211, 1);
   border: none;
-  align-items: center;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -126,6 +125,8 @@ body {
 }
 
 .page-container {
+  width: 1200px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -141,8 +142,7 @@ body {
   margin: 0 auto;
   gap: 30px;
   position: relative;
-  background-color: (255, 255, 255, 1);
-  gap: 28px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .navigation-logo {
@@ -245,11 +245,6 @@ body {
   min-height: 20px;
   min-width: 20px;
   border-radius: 50%;
-}
-
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .hero {
@@ -959,7 +954,7 @@ body {
   pointer-events: none;
 }
 
-.soring-items {
+.sorting-items {
   font-size: 18px;
   color: rgba(255, 255, 255, 1);
 }
@@ -1299,12 +1294,12 @@ body {
   border-radius: 4px;
 }
 
-.pagination-list-item:not(pagination-current-page):hover,
-.pagination-list-item:not(pagination-current-page):focus {
+.pagination-list-item:not(.pagination-current-page):hover,
+.pagination-list-item:not(.pagination-current-page):focus {
   background-color: rgba(104, 162, 202, 1);
 }
 
-.pagination-list-item:not(pagination-current-page):active {
+.pagination-list-item:not(.pagination-current-page):active {
   background-color: rgba(130, 179, 211, 1);
   color: rgba(255, 255, 255, 0.3);
 }
