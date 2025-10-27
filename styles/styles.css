@@ -147,7 +147,7 @@ body {
 
 .navigation-logo {
   height: 64px;
-  width: 140px;
+  width: 138px;
   margin-left: 70px;
 }
 
@@ -184,6 +184,10 @@ body {
   padding: 20px 16px;
 }
 
+.navigation-link-user {
+  padding: 22px 12px;
+}
+
 .navigation-link-current[aria-current="page"]::after {
   content: "";
   position: absolute;
@@ -196,14 +200,14 @@ body {
 }
 
 .user-bar .navigation-link {
-  min-width: 20px;
-  min-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .navigation-button {
   display: inline-block;
-  padding: 12px 24px;
-  min-width: 160px;
+  padding: 8px 24px;
+  width: 160px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 700;
@@ -211,6 +215,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+  box-sizing: border-box;
+  margin-left: 20px;
 }
 
 .navigation-icon {
@@ -232,8 +238,8 @@ body {
 .like-numbers {
   display: flex;
   position: absolute;
-  right: 10px;
-  top: 9px;
+  right: 6px;
+  top: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -284,6 +290,7 @@ body {
 .advantages-header {
   padding-top: 69px;
   padding-bottom: 69px;
+  margin-bottom: 21px   ;
 }
 
 .advantages-list {
@@ -682,11 +689,8 @@ body {
   font-weight: 700;
   line-height: 24px;
   font-size: 20px;
+  padding: 0;
   margin-bottom: 32px;
-}
-
-.filter-column1 {
-  gap: 20px;
 }
 
 .filter-column2 {
@@ -960,9 +964,11 @@ body {
 }
 
 .button-submit {
+  display: block;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  width: 100%;
   text-transform: uppercase;
   text-align: center;
   color: rgba(255, 255, 255, 1);
@@ -971,9 +977,11 @@ body {
   border-radius: 4px;
   margin-bottom: 32px;
   margin-top: 56px;
+  box-sizing: border-box;
 }
 
 .button-reset {
+  display: block;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
