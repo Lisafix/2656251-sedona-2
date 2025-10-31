@@ -853,7 +853,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: 8px;
+  right: 0;
 }
 
 .range-wrapper-inputs {
